@@ -33,12 +33,12 @@ DEBUG = str2bool(os.environ.get('DEBUG'))
 #print(' DEBUG -> ' + str(DEBUG) ) 
 
 # Docker HOST
-ALLOWED_HOSTS = ['nwapinball.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['nwapinball.com', 'localhost', '127.0.0.1', 'https://repo-799203625865.us-central1.run.app/' 'https://repo-i44nxp2gja-uc.a.run.app/']
 
 PORT = os.getenv('PORT', '8080')
 
 # Add here your deployment HOSTS
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080', 'https://nwapinball.com']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080', 'https://nwapinball.com', 'https://repo-799203625865.us-central1.run.app/', 'https://repo-i44nxp2gja-uc.a.run.app/']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:    
