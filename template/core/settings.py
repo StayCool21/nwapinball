@@ -32,7 +32,7 @@ if not SECRET_KEY:
 DEBUG = str2bool(os.environ.get('DEBUG'))
 #print(' DEBUG -> ' + str(DEBUG) ) 
 
-# Docker HOST
+# Docker HOSTs
 ALLOWED_HOSTS = ['nwapinball.com', 'localhost', '127.0.0.1', 'https://repo-799203625865.us-central1.run.app/' 'https://repo-i44nxp2gja-uc.a.run.app/']
 
 PORT = os.getenv('PORT', '8080')
