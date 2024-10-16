@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     # Pages
-    path('', views.index),
+    path('', views.index, name='index'),
     # URL for the privacy policy
     path('privacy-policy/', TemplateView.as_view(template_name='privacyPolicy.html'), name='privacy_policy'),
     path('about-us/', views.abouts_us, name='about_us'),
