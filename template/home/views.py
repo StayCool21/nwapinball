@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView
 from theme_pixel.forms import RegistrationForm, UserLoginForm, UserPasswordResetForm, UserPasswordChangeForm, UserSetPasswordForm
 from django.contrib.auth import logout
 
-
-# Create your views here.
-
-
+# Health check
+def health_check(request):
+    return HttpResponse("OK", status=200)
+  
 # Pages
 def index(request):
   return render(request, 'pages/index.html')
