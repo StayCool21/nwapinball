@@ -35,6 +35,11 @@
                   <li><a target="_blank" href="mailto:nwapinball@yahoo.com">Contact Us</a></li>
               </ul>
           </div>
+          <div class="col-6 col-md-2 mb-5 mb-lg-0">
+            <ul class="footer-links mt-2">
+                <li><a target="_blank" href="mailto:nwapinball@yahoo.com">Contact Us</a></li>
+            </ul>
+          </div>
           <div class="col-12 col-md-4 mb-5 mb-lg-0">
               <span class="h5">Subscribe</span>
               <p class="text-muted font-small mt-2">Join our mailing list. We write rarely, but only the best content.
@@ -54,19 +59,19 @@
                   </div>
               </form>
               <p class="text-muted font-small m-0">We’ll never share your details. See our <a class="text-white"
-                      href="#">Privacy Policy</a></p>
+                      href="{% url 'privacy_policy' %}">Privacy Policy</a></p>
           </div>
       </div>
       <hr class="bg-secondary my-3 my-lg-5">
       <div class="row">
           <div class="col mb-md-0">
-              <a href="https://www.facebook.com/p/NWA-Pinball-Club-61558384277432" target="_blank" class="d-flex justify-content-center mb-3">
+              <a href="{% url 'index' %}" target="_blank" class="d-flex justify-content-center mb-3">
                   <img src="{% static 'assets/img/NWAPinballHorizontalSmallerBack.png' %}" height="30" class="me-2" alt="Themesberg Logo">
                   <p class="text-white fw-bold footer-logo-text m-0"></p>
               </a>
               <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
                   <p class="fw-normal font-small mb-0">
-                    &copy; Logan Nitzsche, Luke Welsh, and Kevin Endrijaitis</p>
+                    &copy; {% now "Y" %} <a href="https://logannitzsche.com">Logan Nitzsche</a>, <a href="https://staycool21.github.io">Luke Welsh</a>, and Kevin Endrijaitis</p>
               </div>
           </div>
       </div>

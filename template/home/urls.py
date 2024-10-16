@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import TemplateView
 from theme_pixel import views
 from django.contrib.auth import views as auth_views
 
@@ -6,6 +7,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     # Pages
     path('', views.index),
+    # URL for the privacy policy
+    path('privacy-policy/', TemplateView.as_view(template_name='privacyPolicy.html'), name='privacy_policy'),
     path('about-us/', views.abouts_us, name='about_us'),
     path('contact-us/', views.contact_us, name='contact_us'),
     path('landing-freelancer/', views.landing_freelancer, name='landing_freelancer'),
