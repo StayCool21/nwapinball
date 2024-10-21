@@ -8204,7 +8204,7 @@ textarea.form-control-lg {
   color: inherit !important; }
 
 .bg-primary {
-  background-color: #C0C0C0 !important; }
+  background-color: #C0C0C0; }
 
 .bg-secondary {
   background-color: #1c2540 !important; }
