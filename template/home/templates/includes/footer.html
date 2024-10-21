@@ -49,7 +49,8 @@
               <span class="h5">Subscribe</span>
               <p class="text-muted font-small mt-2">Join our mailing list. We write rarely, but only the best content.
               </p>
-              <form action="#">
+              <form method="POST" action="{% url 'subscribe' %}">
+                {% csrf_token %}
                   <div class="form-row mb-2">
                       <div class="col-12">
                           <label class="h6 fw-normal text-muted d-none" for="exampleInputEmail3">Email address</label>
