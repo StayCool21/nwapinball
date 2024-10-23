@@ -14,6 +14,7 @@ urlpatterns = [
     path('contact-us/', views.contact_us, name='contact_us'),
     path('landing-freelancer/', views.landing_freelancer, name='landing_freelancer'),
     path('blank/', views.blank_page, name='blank'),
+    path('thank_you/', views.thank_you, name='thank_you'),
 
 
     # Authentication

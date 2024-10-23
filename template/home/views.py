@@ -135,3 +135,6 @@ def subscribe(request):
         })
 
         return redirect('thank_you')  # Redirect to a thank-you page
+    
+def thank_you(request):
+    return render(request, 'thank_you.html')
