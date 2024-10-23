@@ -129,7 +129,7 @@ def subscribe(request):
         email = request.POST.get('email')
 
         # Add email to Firestore
-        email_ref = db.collection('subscribers').document(email)
+        email_ref = db.collection('emails').document(email)
         email_ref.set({
             'email': email
         })
