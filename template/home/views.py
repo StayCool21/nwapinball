@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView
 from theme_pixel.forms import RegistrationForm, UserLoginForm, UserPasswordResetForm, UserPasswordChangeForm, UserSetPasswordForm
 from django.contrib.auth import logout
+from google.cloud import firestore
 
 # Health check
 def health_check(request):
@@ -119,3 +120,18 @@ def tooltips(request):
 
 def typography(request):
   return render(request, 'components/typography.html')
+
+# Initialize Firestore
+db = firestore.Client()
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+
+        # Add email to Firestore
+        email_ref = db.collection('subscribers').document(email)
+        email_ref.set({
+            'email': email
+        })
+
+        return redirect('thank_you')  # Redirect to a thank-you page
