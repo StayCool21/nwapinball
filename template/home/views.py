@@ -120,20 +120,20 @@ def tooltips(request):
 def typography(request):
   return render(request, 'components/typography.html')
 
-# Initialize Firestore
-db = firestore.Client()
+# # Initialize Firestore
+# db = firestore.Client()
 
-def subscribe(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
+# def subscribe(request):
+#     if request.method == 'POST':
+#         email = request.POST.get('email')
 
-        # Add email to Firestore
-        email_ref = db.collection('emails').document(email)
-        email_ref.set({
-            'email': email
-        })
+#         # Add email to Firestore
+#         email_ref = db.collection('emails').document(email)
+#         email_ref.set({
+#             'email': email
+#         })
 
-        return redirect('thank_you')  # Redirect to a thank-you page
+#         return redirect('thank_you')  # Redirect to a thank-you page
     
 def thank_you(request):
     return render(request, 'thank_you.html')
